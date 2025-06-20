@@ -11,19 +11,22 @@ document.querySelectorAll('.section').forEach(section => {
   observer.observe(section);
 });
 
-// Contact form handler (mailto)
-document.addEventListener('DOMContentLoaded', () => {
-  const form = document.querySelector('.form');
-  if (form) {
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const name = form.querySelector('[name="name"]').value;
-      const email = form.querySelector('[name="email"]').value;
-      const message = form.querySelector('[name="message"]').value;
-      const sendTo = form.querySelector('[name="send_to_mail"]').value;
-      const subject = encodeURIComponent('Contactformulier van ' + name);
-      const body = encodeURIComponent(`Naam: ${name}\nEmail: ${email}\nBericht: ${message}`);
-      window.location.href = `mailto:${sendTo}?subject=${subject}&body=${body}`;
-    });
-  }
-});
+function sendMail(event) {
+  if (event) event.preventDefault();
+
+  const name = document.querySelector('[name="name"]').value.trim();
+  const email = document.querySelector('[name="email"]').value.trim();
+  const message = document.querySelector('[name="message"]').value.trim();
+
+  const subject = encodeURIComponent("Nieuw bericht van je CV-site");
+  const body = encodeURIComponent(`Naam: ${name}\nEmail: ${email}\n\nBericht:\n${message}`);
+  const recipient = "isaiahkoroma@hotmail.com";
+  const cc = encodeURIComponent(email);
+
+  const mailtoLink = `mailto:${recipient}?subject=${subject}&body=${body}&cc=${cc}`;
+
+  // Open user's email app
+  console.log('test');
+  window.location.href = mailtoLink;
+}
+

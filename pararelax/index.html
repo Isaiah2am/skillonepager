@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mijn Skills Onepager</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sintony:400,700&display=swap">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" >
+  <script src="js/main.js" defer></script>
 </head>
 <body>
   <header class="header">
@@ -42,11 +43,11 @@
           </div>
         </div>
         <p class="skills__text">Hier vertel je over jouw programmeer-, sport-, of andere vaardigheden. Gebruik deze ruimte om jezelf te presenteren!</p>
-      </div>
-    </section>
-    <section class="section section--contact" id="section-contact">
-      <h2 class="contact__title">Contact</h2>
-      <form class="form">
+            </div>
+          </section>
+          <section class="section section--contact" id="section-contact">
+            <h2 class="contact__title">Contact</h2>
+            <form class="form" action="javascript:sendMail();" method="post">
         <label class="form__label" for="name">Naam</label>
         <input class="form__input" type="text" id="name" name="name" required>
         <label class="form__label" for="email">Email</label>
@@ -55,12 +56,11 @@
         <textarea class="form__textarea" id="message" name="message" rows="5" required></textarea>
         <input type="hidden" name="send_to_mail" value="jouw@email.nl">
         <button class="form__button" type="submit">Versturen</button>
-      </form>
-    </section>
+            </form>
+          </section>
   </main>
   <footer class="footer">
 gemaakt door isaiah
   </footer>
-  <script src="main.js"></script>
 </body>
 </html>
