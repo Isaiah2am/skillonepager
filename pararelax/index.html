@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mijn Skills Onepager</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sintony:400,700&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a class="nav__link" href="#section-hero">Home</a>
+      <a class="nav__link" href="#section-skills">Mijn skills</a>
+      <a class="nav__link" href="#section-contact">Contact</a>
+    </nav>
+  </header>
+  <main class="main">
+    <section class="section section--hero" id="section-hero">
+      <h1 class="hero__title">Welkom! Ik ben Isaiah</h1>
+      <p class="hero__subtitle">Dit is mijn onepager over mijn skills.</p>
+    </section>
+    <section class="section section--skills" id="section-skills">
+      <img class="skills__image" src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=400&q=80" alt="Jouw skill">
+      <div class="skills__content">
+        <h2 class="skills__title">Mijn Skills</h2>
+        <div class="skills__cards">
+          <div class="skills__card">
+            <div class="skills__card-icon">💻</div>
+            <div class="skills__card-title">Programmeren</div>
+            <div class="skills__card-text">Ik kan websites bouwen met HTML, CSS, en JavaScript.</div>
+          </div>
+          <div class="skills__card">
+            <div class="skills__card-icon">⚽</div>
+            <div class="skills__card-title">Sport</div>
+            <div class="skills__card-text">Ik voetbal graag en train meerdere keren per week.</div>
+          </div>
+          <div class="skills__card">
+            <div class="skills__card-icon">🎨</div>
+            <div class="skills__card-title">Design</div>
+            <div class="skills__card-text">Ik heb oog voor kleur, typografie en lay-out.</div>
+          </div>
+        </div>
+        <p class="skills__text">Hier vertel je over jouw programmeer-, sport-, of andere vaardigheden. Gebruik deze ruimte om jezelf te presenteren!</p>
+      </div>
+    </section>
+    <section class="section section--contact" id="section-contact">
+      <h2 class="contact__title">Contact</h2>
+      <form class="form">
+        <label class="form__label" for="name">Naam</label>
+        <input class="form__input" type="text" id="name" name="name" required>
+        <label class="form__label" for="email">Email</label>
+        <input class="form__input" type="text" id="email" name="email" required>
+        <label class="form__label" for="message">Bericht</label>
+        <textarea class="form__textarea" id="message" name="message" rows="5" required></textarea>
+        <input type="hidden" name="send_to_mail" value="jouw@email.nl">
+        <button class="form__button" type="submit">Versturen</button>
+      </form>
+    </section>
+  </main>
+  <footer class="footer">
+gemaakt door isaiah
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>
